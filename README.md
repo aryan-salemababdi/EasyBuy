@@ -4,6 +4,9 @@
  
 this app developed by ReactJs
 
+This app is under development ...
+
+Not completed !
 
 eeasybuy.netlify.app   # web address
 
