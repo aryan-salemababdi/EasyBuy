@@ -26,7 +26,7 @@ const Footer = () => {
         return emailvalue;
     };
 
-    const splitemail = email.split("@");
+   const resultVariEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) === true ? true : false;
 
     return (
         <div>
@@ -112,8 +112,8 @@ const Footer = () => {
                             <Link to="/"><h3>با ثبت ایمیل، از جدید‌ترین تخفیف‌ها با‌خبر شوید</h3></Link>
                             <div className={styles.inputnews}>
                                 <input onChange={handleEmailChange} className='inputreg' type="email" value={email} name="email" placeholder='ایمیل خود را وارد کنید' />
-                                <button className={splitemail.length === 2 ? styles.regbutton : styles.regbuttonoff} disabled={!(splitemail.length === 2)}><h3>ثبت</h3></button>
-                                <p className={splitemail[0] === "" || splitemail.length === 2 ? styles.errormailoff : styles.errormail} >پست الکترونیکی وارد شده درست نیست !</p>
+                                <button className={resultVariEmail ? styles.regbutton : styles.regbuttonoff} disabled={!(resultVariEmail)}><h3>ثبت</h3></button>
+                                <p className={resultVariEmail ? styles.errormailoff : styles.errormail} >پست الکترونیکی وارد شده درست نیست !</p>
                             </div>
                         </div>
                     </div>
