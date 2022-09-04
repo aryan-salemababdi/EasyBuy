@@ -22,8 +22,8 @@ import styles from "./signin.module.css";
 
 const Signin = () => {
     const [data, setData] = useState({
-        firstName: " ",
-        lastName: " ",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
         confrimPassword: "",
